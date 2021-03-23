@@ -4,5 +4,5 @@ import creational.factory.Animal
 
 class Cat : Animal {
     override fun getAnimal(): String = "Cat!"
-    override fun makeSound(): String = "Meow!"
+    override fun makeSound() = println("Meow!")
 }
