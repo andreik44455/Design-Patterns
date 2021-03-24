@@ -1,10 +1,15 @@
 import creational.abstractfactory.FactoryProvider
 import creational.abstractfactory.factory.AndroidFactory
 import creational.factory.AnimalFactory
+import creational.singleton.GenericSingleton
+import creational.singleton.JavaSingleton
+import creational.singleton.KotlinSingleton
+import creational.singleton.ParameterizedSingleton
 
 fun main(args: Array<String>) {
     // factoryPatternDemo()
     // abstractFactoryPatternDemo()
+    // singletonPatternDemo()
 }
 
 fun factoryPatternDemo() {
@@ -30,4 +35,11 @@ fun abstractFactoryPatternDemo() {
     val androidFactoryTwo = FactoryProvider.getFactoryByType<AndroidFactory>()
     val androidCheckboxTwo = androidFactoryTwo.createCheckbox()
     androidCheckboxTwo.draw()
+}
+
+fun singletonPatternDemo() {
+    JavaSingleton.getInstance()
+    KotlinSingleton
+    ParameterizedSingleton.getInstance("Static")
+    GenericSingleton.getInstance("Generic")
 }
