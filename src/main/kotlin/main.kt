@@ -2,6 +2,7 @@ import creational.abstractfactory.FactoryProvider
 import creational.abstractfactory.factory.AndroidFactory
 import creational.factory.AnimalFactory
 import creational.singleton.JavaSingleton
+import creational.singleton.KotlinSingleton
 
 fun main(args: Array<String>) {
     // factoryPatternDemo()
@@ -36,4 +37,5 @@ fun abstractFactoryPatternDemo() {
 
 fun singletonPatternDemo() {
     JavaSingleton.getInstance()
+    KotlinSingleton
 }
