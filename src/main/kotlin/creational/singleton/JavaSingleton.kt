@@ -1,5 +1,8 @@
 package creational.singleton
 
+/**
+ * Implements Singleton pattern as in Java
+ */
 class JavaSingleton private constructor() {
 
     init {
@@ -7,6 +10,7 @@ class JavaSingleton private constructor() {
     }
 
     companion object {
+        @Volatile
         private var instance: JavaSingleton? = null
 
         fun getInstance(): JavaSingleton? {

@@ -1,5 +1,8 @@
 package creational.singleton
 
+/**
+ * Implements Singleton pattern natively to Kotlin
+ */
 object KotlinSingleton {
 
     init {
