@@ -1,9 +1,13 @@
 import creational.abstractfactory.demoAbstractFactoryPattern
-import creational.factory.demoFactoryPatternDemo
+import creational.builder.demoAllOnBuildBuilders
+import creational.builder.demoBuilderWithProductInstance
+import creational.factory.demoFactoryPattern
 import creational.singleton.demoSingletonPattern
 
 fun main(args: Array<String>) {
-    demoFactoryPatternDemo()
+    demoFactoryPattern()
     demoAbstractFactoryPattern()
     demoSingletonPattern()
+    demoBuilderWithProductInstance()
+    demoAllOnBuildBuilders()
 }
