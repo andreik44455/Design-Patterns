@@ -1,6 +1,6 @@
 package creational.factory
 
-fun demoFactoryPatternDemo() {
+fun demoFactoryPattern() {
     println("Demo factory pattern:")
 
     val cat = AnimalFactory.getAnimal("cat")!!

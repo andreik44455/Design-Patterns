@@ -1,4 +1,9 @@
-package creational.builder.buildingproductonbuild
+package creational.builder
+
+import creational.builder.buildingproductonbuild.CarUsingDsl
+import creational.builder.buildingproductonbuild.CarUsingDslWithRequiredField
+import creational.builder.buildingproductonbuild.CarWithDataBuilder
+import creational.builder.buildingproductonbuild.CarWithSecondaryConstructor
 
 fun demoAllOnBuildBuilders() {
     println("Demo all builders with build() method:")
@@ -7,8 +12,9 @@ fun demoAllOnBuildBuilders() {
     demoCarWithSecondaryConstructor()
     demoCarUsingDsl()
     demoCarWithDataBuilder()
+    demoCarUsingDslWithRequiredField()
 
-    println("-----END-----")
+    println("-----END-----\n")
 }
 
 fun demoCarWithDataBuilder() {
