@@ -6,6 +6,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Factory Pattern](#factory-pattern)
    - [Abstract Factory Pattern](#abstract-factory-pattern)
    - [Singleton Pattern](#singleton-pattern)
+   - [Builder Pattern](#builder-pattern)
 2. [Structural Patterns](#structural-patterns)
 3. [Behavioral Patterns](#behavioral-patterns)
 
@@ -28,6 +29,22 @@ The Abstract Factory design pattern describes how to solve such problems:
 
 ## Singleton Pattern
 The key idea in this pattern is to make the class itself responsible for controlling its instantiation (that it is instantiated only once).
+
+## Builder Pattern
+It is used to great advantage with immutable classes. With them, the Builder is a mutable "helper" class that assists in the ultimate construction of the final product which is thereafter immutable.
+
+The Builder pattern by the GoF (Gamma et al) has no build() method (as in the image below). It does say ConcreteBuilders provide an interface for retrieving the product, e.g., getResult() to return the result that was build in steps. None of the sample code in GoF uses chaining.
+
+![Builder pattern](images/builder_pattern.png)
+
+Example code for the classic builder pattern can be found in `creational.builder.withproductinstanceinside` package (note that it uses unusual for Kotlin C# indexer).
+
+Many people use Builder differently than GoF. Their idea was to have directors that encapsulate all the build steps.
+So, other examples of builder pattern can be found in `creational.builder.buildingproductonbuild` package:
+   - Using data class for the Builder
+   - Using secondary constructor with Builder as an argument
+   - Using DSL
+   - Using DSL and required field
 
 # Structural Patterns
 
