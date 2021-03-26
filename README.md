@@ -69,7 +69,7 @@ When to use examples:
    - Serialization method gives you a deep copy of an object.
 
 ### Copy constructor vs Clone
-we can also use the clone method to create an object from an existing object. However, the copy constructor has some advantages over the clone method:
+The copy constructor has some advantages over the clone method:
 - The copy constructor is much easier to implement. We do not need to implement the Cloneable interface and handle CloneNotSupportedException.
 - The clone method returns a general Object reference. Therefore, we need to typecast it to the appropriate type. 
 - Can not assign a value to a final field in the clone method. However, we can do so in the copy constructor.
