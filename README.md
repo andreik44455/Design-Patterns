@@ -7,6 +7,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Abstract Factory Pattern](#abstract-factory-pattern)
    - [Singleton Pattern](#singleton-pattern)
    - [Builder Pattern](#builder-pattern)
+   - [Prototype Pattern](#prototype-pattern)
 2. [Structural Patterns](#structural-patterns)
 3. [Behavioral Patterns](#behavioral-patterns)
 
@@ -46,6 +47,34 @@ So, other examples of builder pattern can be found in `creational.builder.buildi
    - Using DSL
    - Using DSL and required field
 
+## Prototype Pattern
+It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.
+
+When to use examples:
+   - avoid subclasses of an object creator in the client application, like the factory method pattern does.
+   - avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
+
+### Ways to implement:
+   1. `Cloneable` interface, however, it's quite [risky](https://dev.to/lovis/gang-of-four-patterns-in-kotlin) as you need to be careful how `clone()` is implemented. 
+   2. Copy constructors, helpful when we want to copy a complex object that has several fields.
+   3. Kotlin's data class, it will provide a necessary copy method to avoid  expensive object creation. BUT you can't have multiple data classes implement an interface and then call clone() on objects of the Interface type (as interface doesn't have the `copy()` function). Hence, you can't use this method to "avoid subclasses of an object creator in the client application".
+   4. Serialization, which requires a copied object to be `Serializable`:
+      - in Java, `org.apache.commons.lang.SerializationUtils;` that provides clone() method.
+      - in Kotlin, `kotlinx.serialization.Serializable` and implement clone() function manually.
+
+### Shallow or deep copy.
+   - `Cloneable` doesn't actually require deep or shallow copying. You need to take care of it yourself.
+   - Copy constructors create a deep copy.
+   - Kotlin's data class `copy()` is a shallow copy.
+   - Serialization method gives you a deep copy of an object.
+
+### Copy constructor vs Clone
+we can also use the clone method to create an object from an existing object. However, the copy constructor has some advantages over the clone method:
+- The copy constructor is much easier to implement. We do not need to implement the Cloneable interface and handle CloneNotSupportedException.
+- The clone method returns a general Object reference. Therefore, we need to typecast it to the appropriate type. 
+- Can not assign a value to a final field in the clone method. However, we can do so in the copy constructor.
+
+ 
 # Structural Patterns
 
 # Behavioral Patterns
