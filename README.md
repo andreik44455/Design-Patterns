@@ -86,4 +86,11 @@ The adapter design pattern solves problems like:
 - How can classes that have incompatible interfaces work together?
 - How can an alternative interface be provided for a class?
 
+## Decorator Pattern
+Used to decorate individual objects at run-time.
+In other words, attach additional responsibilities to an object dynamically.
+This pattern acts as a wrapper to existing object, not class as a whole.
+
+![Decorator pattern](images/decorator_pattern.png)
+
 # Behavioral Patterns
