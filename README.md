@@ -10,6 +10,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Prototype Pattern](#prototype-pattern)
 2. [Structural Patterns](#structural-patterns)
    - [Adapter Pattern](#adapter-pattern)
+   - [Bridge Pattern](#bridge-pattern)
 3. [Behavioral Patterns](#behavioral-patterns)
 
 # Creational Patterns
@@ -85,5 +86,12 @@ The adapter design pattern solves problems like:
 - How can a class be reused that does not have an interface that a client requires?
 - How can classes that have incompatible interfaces work together?
 - How can an alternative interface be provided for a class?
+
+## Bridge Pattern
+"Decouple an *abstraction* from its *implementation* so that the two can vary independently". ([Gang Of Four](https://en.wikipedia.org/wiki/Design_Patterns))
+
+The *abstraction* and *implementation*  are not related to abstract classes or interfaces from programming.
+
+The *abstraction* in the above is the name for high-level control layer for some entity. This layer doesn't do any real work on its own and delegates the work to the *implementation* layer.
 
 # Behavioral Patterns
