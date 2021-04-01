@@ -1,11 +1,7 @@
 package structural.composite
 
 import structural.composite.employee.BankManager
-
 import structural.composite.employee.Accountant
-
-
-
 
 fun demoCompositePattern() {
     println("Demo Composite pattern:\n")
