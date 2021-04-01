@@ -94,4 +94,6 @@ The *abstraction* and *implementation*  are not related to abstract classes or i
 
 The *abstraction* in the above is the name for high-level control layer for some entity. This layer doesn't do any real work on its own and delegates the work to the *implementation* layer.
 
+![Bridge pattern](images/bridge_pattern.png)
+
 # Behavioral Patterns
