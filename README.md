@@ -12,6 +12,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Adapter Pattern](#adapter-pattern)
    - [Bridge Pattern](#bridge-pattern)
    - [Composite Pattern](#composite-pattern) 
+   - [Facade Pattern](#facade-pattern) 
 3. [Behavioral Patterns](#behavioral-patterns)
 
 # Creational Patterns
@@ -117,5 +118,10 @@ In other words, attach additional responsibilities to an object dynamically.
 This pattern acts as a wrapper to existing object, not class as a whole.
 
 ![Decorator pattern](images/decorator_pattern.png)
+
+## Facade Pattern
+Use the facade design pattern when a system is very complex or difficult to understand because the system has many interdependent classes or because its source code is unavailable.
+
+![Facade pattern](images/facade_pattern.png)
 
 # Behavioral Patterns
