@@ -9,6 +9,13 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Builder Pattern](#builder-pattern)
    - [Prototype Pattern](#prototype-pattern)
 2. [Structural Patterns](#structural-patterns)
+   - [Adapter Pattern](#adapter-pattern)
+   - [Bridge Pattern](#bridge-pattern)
+   - [Composite Pattern](#composite-pattern) 
+   - [Facade Pattern](#facade-pattern) 
+   - [Flyweight Pattern](#flyweight-pattern)
+   - [Proxy Pattern](#proxy-pattern)
+   - [How do structural patterns differ?](#how-do-structural-patterns-differ)
 3. [Behavioral Patterns](#behavioral-patterns)
 
 # Creational Patterns
@@ -76,5 +83,76 @@ The copy constructor has some advantages over the clone method:
 
  
 # Structural Patterns
+Explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
+
+## Adapter Pattern
+Allows objects with incompatible interfaces to collaborate.
+
+The adapter design pattern solves problems like:
+- How can a class be reused that does not have an interface that a client requires?
+- How can classes that have incompatible interfaces work together?
+- How can an alternative interface be provided for a class?
+
+## Bridge Pattern
+"Decouple an *abstraction* from its *implementation* so that the two can vary independently". ([Gang Of Four](https://en.wikipedia.org/wiki/Design_Patterns))
+
+The *abstraction* and *implementation*  are not related to abstract classes or interfaces from programming.
+
+The *abstraction* in the above is the name for high-level control layer for some entity. This layer doesn't do any real work on its own and delegates the work to the *implementation* layer.
+
+![Bridge pattern](images/bridge_pattern.png)
+
+## Composite Pattern
+“Compose objects into tree structures to represent part-whole
+hierarchies . Composite lets clients treat individual objects and
+compositions of objects uniformly” ([Gang Of Four](https://en.wikipedia.org/wiki/Design_Patterns))
+
+- In other words, implementing a Composite pattern
+means creating an common base class that represents
+both a part of an object, and the containing object as a
+whole.
+- You should consider refactoring to a Composite pattern
+when data or code forms an implicit tree structure.
+
+![Composite_pattern](images/composite_pattern.png)
+
+## Decorator Pattern
+Used to decorate individual objects at run-time.
+In other words, attach additional responsibilities to an object dynamically.
+This pattern acts as a wrapper to existing object, not class as a whole.
+
+![Decorator pattern](images/decorator_pattern.png)
+
+## Facade Pattern
+Use the facade design pattern when a system is very complex or difficult to understand because the system has many interdependent classes or because its source code is unavailable.
+
+![Facade pattern](images/facade_pattern.png)
+
+## Flyweight Pattern
+A flyweight is an object that minimizes memory usage by sharing as much data as possible with other similar objects; it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory.
+
+For example, in shooter video games a world can contain millions of bullets at the same type that requires a lot of memory. To reduce RAM usage, one can create a flyweight object that will hold common data (color, view) that is called *intrinsic* data and reuse it in different contexts. 
+
+![Flyweight pattern](images/flyweight_pattern.png)
+
+## Proxy Pattern
+Provides an object that acts as a substitute for a real service object used by a client. A proxy receives client requests, does some work (access control, caching, etc.) and then passes the request to a service object.
+
+![Proxy pattern](images/proxy_pattern.png)
+
+## How do structural patterns differ?
+1. Proxy, Decorator, Adapter, and Bridge are all variations on "wrapping" a class. But their uses are different:
+   
+   - **Proxy** could be used when you want to lazy-instantiate an object, or hide the fact that you're calling a remote service, or control access to the object.
+   - **Decorator** is also called "Smart Proxy." This is used when you want to add functionality to an object, but not by extending that object's type. This allows you to do so at runtime. 
+   - **Adapter** is used when you have an abstract interface, and you want to map that interface to another object which has similar functional role, but a different interface.
+   - **Bridge** is very similar to Adapter, but we call it Bridge when you define both the abstract interface and the underlying implementation. I.e. you're not adapting to some legacy or third-party code, you're the designer of all the code but you need to be able to swap out different implementations.
+   - **Facade** is a higher-level (read: simpler) interface to a subsystem of one or more classes. Suppose you have a complex concept that requires multiple objects to represent. Making changes to that set of objects is confusing, because you don't always know which object has the method you need to call. That's the time to write a Facade that provides high-level methods for all the complex operations you can do to the collection of objects. Example: a Domain Model for a school section, with methods like countStudents(), reportAttendance(), assignSubstituteTeacher(), and so on.
+   
+2. So are their structures:
+   - **Proxy** and **Decorator** both have the same interface as their wrapped types, but the proxy creates an instance under the hood, whereas the decorator takes an instance in the constructor. 
+   - **Adapter** and **Facade** both have a different interface than what they wrap. But the adapter derives from an existing interface, whereas the facade creates a new interface. 
+   - **Bridge** and **Adapter** both point at an existing type. But the bridge will point at an abstract type, and the adapter might point to a concrete type. The bridge will allow you to pair the implementation at runtime, whereas the adapter usually won't.
+   
 
 # Behavioral Patterns
