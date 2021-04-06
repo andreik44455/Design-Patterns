@@ -14,7 +14,7 @@ fun demoProxyPattern() {
     println("Users uses client with cache: ")
     val smart: Long = test(smartDownloader)
 
-    print("Time saved by caching proxy: " + (naive - smart) + "ms")
+    println("Time saved by caching proxy: " + (naive - smart) + "ms")
 
     println("-----END-----")
 }
