@@ -13,6 +13,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Bridge Pattern](#bridge-pattern)
    - [Composite Pattern](#composite-pattern) 
    - [Facade Pattern](#facade-pattern) 
+   - [Proxy Pattern](#proxy-pattern)
 3. [Behavioral Patterns](#behavioral-patterns)
 
 # Creational Patterns
@@ -123,5 +124,10 @@ This pattern acts as a wrapper to existing object, not class as a whole.
 Use the facade design pattern when a system is very complex or difficult to understand because the system has many interdependent classes or because its source code is unavailable.
 
 ![Facade pattern](images/facade_pattern.png)
+
+## Proxy Pattern
+Provides an object that acts as a substitute for a real service object used by a client. A proxy receives client requests, does some work (access control, caching, etc.) and then passes the request to a service object.
+
+![Proxy pattern](images/facade_pattern.png)
 
 # Behavioral Patterns
