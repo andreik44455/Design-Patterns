@@ -13,6 +13,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Bridge Pattern](#bridge-pattern)
    - [Composite Pattern](#composite-pattern) 
    - [Facade Pattern](#facade-pattern) 
+   - [Flyweight Pattern](#flyweight-pattern)
 3. [Behavioral Patterns](#behavioral-patterns)
 
 # Creational Patterns
@@ -123,5 +124,12 @@ This pattern acts as a wrapper to existing object, not class as a whole.
 Use the facade design pattern when a system is very complex or difficult to understand because the system has many interdependent classes or because its source code is unavailable.
 
 ![Facade pattern](images/facade_pattern.png)
+
+## Flyweight Pattern
+A flyweight is an object that minimizes memory usage by sharing as much data as possible with other similar objects; it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory.
+
+For example, in shooter video games a world can contain millions of bullets at the same type that requires a lot of memory. To reduce RAM usage, one can create a flyweight object that will hold common data (color, view) that is called *intrinsic* data and reuse it in different contexts. 
+
+![Flyweight pattern](images/flyweight_pattern.png)
 
 # Behavioral Patterns
