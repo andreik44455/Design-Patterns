@@ -136,5 +136,5 @@ For example, in shooter video games a world can contain millions of bullets at t
 ## Proxy Pattern
 Provides an object that acts as a substitute for a real service object used by a client. A proxy receives client requests, does some work (access control, caching, etc.) and then passes the request to a service object.
 
-![Proxy pattern](images/facade_pattern.png)
+![Proxy pattern](images/proxy_pattern.png)
 # Behavioral Patterns
