@@ -17,6 +17,7 @@ Design patterns have been evolved over a long period of time and they provide be
    - [Proxy Pattern](#proxy-pattern)
    - [How do structural patterns differ?](#how-do-structural-patterns-differ)
 3. [Behavioral Patterns](#behavioral-patterns)
+   - [Chain of responsibility](#chain-of-responsibility)
 
 # Creational Patterns
 These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
@@ -156,3 +157,8 @@ Provides an object that acts as a substitute for a real service object used by a
    
 
 # Behavioral Patterns
+
+## Chain of Responsibility
+Lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+
+![Proxy pattern](images/chainofresp_pattern.png)
