@@ -6,6 +6,8 @@ import behavioral.chainofresp.logger.FileLogger
 
 
 fun demoChainOfRespPattern() {
+    println("Demo Chain of responsibility pattern:\n")
+
     val loggerChain = getChainOfLoggers()
 
     // DEBUG printed in console
@@ -19,6 +21,8 @@ fun demoChainOfRespPattern() {
     // ERROR is printed in console, file and error
     loggerChain.logMessage(AbstractLogger.ERROR,
         "This is an error information.")
+
+    println("-----END-----\n")
 }
 
 private fun getChainOfLoggers(): AbstractLogger {
