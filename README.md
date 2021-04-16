@@ -176,3 +176,9 @@ A request is wrapped under an object as command and passed to invoker object. In
 Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
 ![Iterator pattern](images/iterator_pattern.png)
+
+## Mediator Pattern
+
+Defines an object that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly, and lets you vary their interaction independently.
+
+![Mediator pattern](images/mediator_pattern.png)
