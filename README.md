@@ -19,6 +19,7 @@ Design patterns have been evolved over a long period of time and they provide be
 3. [Behavioral Patterns](#behavioral-patterns)
    - [Chain of responsibility pattern](#chain-of-responsibility-pattern)
    - [Command pattern](#command-pattern)
+   - [Iterator pattern](#iterator-pattern)
 
 # Creational Patterns
 These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
@@ -170,3 +171,8 @@ Encapsulates a request as an object, thereby letting you parameterize clients wi
 A request is wrapped under an object as command and passed to invoker object. Invoker object looks for the appropriate object which can handle this command and passes the command to the corresponding object which executes the command.
 
 ![Command pattern](images/command_pattern.png)
+
+## Iterator Pattern
+Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+![Iterator pattern](images/iterator_pattern.png)
